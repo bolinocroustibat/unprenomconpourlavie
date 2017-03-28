@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding='UTF-8' ?>
+
+<config
+framerate="20" 
+min_pixels_per_object="60000" 
+initial_pixels_per_object="100000"
+/>
+
+<floater type="grey_square"
+quantity="0" 
+maximum_speed="18" 
+maximum_depth_speed="1.2" 
+maximum_rotation_speed="18" 
+acceleration="0.6"
+min_depth="0"
+min_depth_probability="0.01"
+depth_step="8"
+max_depth="20"
+min_duration="2"
+max_duration="6"
+min_size="80"
+max_size="180"
+min_luminosity="100"
+max_luminosity="400"
+/>
+
+<floater type="grey_circle" 
+quantity="0" 
+maximum_speed="18" 
+maximum_depth_speed="1.2" 
+acceleration="0.6"
+min_depth="0"
+min_depth_probability="0.01"
+depth_step="8"
+max_depth="20"
+min_duration="2"
+max_duration="6"
+min_size="10"
+max_size="80"
+min_luminosity="0"
+max_luminosity="50"
+/>
+
+<floater type="imageset" 
+quantity="40" 
+maximum_speed="18" 
+maximum_depth_speed="1.2" 
+maximum_rotation_speed="18" 
+acceleration="0.6"
+min_depth="1"
+min_depth_probability="1"
+depth_step="1"
+max_depth="1"
+min_duration="2"
+max_duration="6"
+>
+  <image image_url="http://www.unprenomconpourlavie.com/flash/nuage1.gif" />
+  <image image_url="http://www.unprenomconpourlavie.com/flash/nuage2.gif" />
+  <image image_url="http://www.unprenomconpourlavie.com/flash/nuage1.gif" />
+  <image image_url="http://www.unprenomconpourlavie.com/flash/nuage2.gif" />
+  <image image_url="http://www.unprenomconpourlavie.com/flash/oiseau1.gif" />
+</floater>

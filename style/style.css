@@ -1,0 +1,175 @@
+*{
+padding:0;
+margin:0;
+}
+
+body {
+margin:0px;
+padding:0px;
+font-family: 'OFL Sorts Mill Goudy TT',Georgia,serif;
+font-size: 16px;
+color: #777;
+background: url('prenomscons_background_4.jpg') repeat;
+}
+
+#formulaire {
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
+width:640px;
+padding:20px;
+background-color : #fbedf3;
+/* background-color: #CBFADF; */
+/* background-color: #fffaf4; */
+border-radius: 15px;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+}
+
+.bouton{
+border:1px solid #444;
+background-color:#ffbac6;
+color:#444;
+font-weight:900;
+padding:3px;
+cursor:pointer;
+}
+
+.bouton:hover{
+border:1px solid #777;
+background-color:white;
+color:#777;
+font-weight:900;
+padding:3px;
+cursor:pointer;
+}
+
+
+#menu{
+font-size:18px;
+position:relative;
+z-index: 1;
+margin-top: 20px;
+margin-left: auto;
+margin-right: auto;
+width: 680px;
+}
+
+#menu span{
+display:inline;
+position:relative;
+z-index: 1;
+text-align:center;
+padding: 0 15px 5px 15px;
+margin-right:20px;
+background-color : #fbedf3;
+/* background-color: #CBFADF; */
+-moz-border-radius-topright: 15px;
+border-top-right-radius: 15px;
+-moz-border-radius-topleft: 15px;
+border-top-left-radius: 15px;
+}
+
+#menu a{
+display:inline;
+position:relative;
+z-index: 1;
+text-decoration:none;
+text-align:center;
+padding: 0 15px 5px 15px;
+margin-right:20px;
+background-color: #ffbac6;
+/* background-color: #04959D; */
+-moz-border-radius-topright: 15px;
+border-top-right-radius: 15px;
+-moz-border-radius-topleft: 15px;
+border-top-left-radius: 15px;
+color:#444;
+}
+
+#menu a:hover{
+text-decoration:none;
+background-color: #FFF;
+}
+
+#contenu {
+position:relative;
+z-index: 10;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px;
+width: 640px;
+padding:20px;
+background-color : #fbedf3;
+/* background-color: #CBFADF; */
+-moz-border-radius-topright: 15px;
+border-top-right-radius: 15px;
+-moz-border-radius-bottomleft: 15px;
+border-bottom-left-radius: 15px;
+-moz-border-radius-bottomright: 15px;
+border-bottom-right-radius: 15px;
+}
+
+.entree{
+display:block;
+list-style-type:none;
+padding:0 0 20px 0;
+text-align:top;
+}
+
+.entree1ligne{
+color:#AAA;
+font-size:22px;
+}
+
+.prenom {
+font-size: 18px;
+padding:5px 0 5px 0;
+color:#555;
+}
+
+.entree2ligne{
+font-size:13px;
+}
+
+.lien{
+color:#6d84b4;
+text-decoration:none;
+}
+
+.lien:hover{
+color:#6d84b4;
+text-decoration:underline;
+cursor:pointer;
+}
+
+.separateur{
+width:50px;
+font-size:32px;
+margin-left:auto;
+margin-right:auto;
+}
+
+#pages{
+padding-top:30px;
+text-align:center;
+}
+
+#contact{
+margin-top:40px;
+margin-bottom:20px;
+margin-left:auto;
+margin-right:auto;
+width: 680px;
+text-align:center;
+}
+
+#contact a{
+color:#6d84b4;
+font-size:13px;
+text-decoration:none;
+}
+
+#contact a:hover{
+text-decoration:underline;
+}

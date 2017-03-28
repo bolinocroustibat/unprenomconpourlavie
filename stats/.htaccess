@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Members Only"
+AuthUserFile /data/sites/clients/client2/web28/web/stats/.htpasswd_stats
+require valid-user
