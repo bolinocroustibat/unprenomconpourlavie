@@ -1,14 +1,9 @@
 RewriteEngine On
 
-############ http://unprenomconpourlavie.com équivalent à http://www.unprenomconpourlavie.com ######
-# RewriteCond %{HTTP_HOST} !^www\.unprenomconpourlavie\.com [NC]
-# RewriteRule (.*) http://www.unprenomconpourlavie.com/$1 [QSA,R=301,L]
-
-
 ##################################   REECRITURE DES PAGES   ###########################################
 
-# RewriteRule ^$									index.php [QSA,L]
-# RewriteRule ^recents\.html$						recents.php [QSA,L]
+# RewriteRule ^$								index.php [QSA,L]
+# RewriteRule ^recents\.html$					recents.php [QSA,L]
 # RewriteRule ^best\.html$						best.php [QSA,L]
 
 # RewriteRule ^recents-(.+)\.html$				recents.php?page=$1 [QSA,L]
