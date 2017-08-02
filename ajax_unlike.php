@@ -1,10 +1,8 @@
 <?php
 include("outils/connex.php");
-database_connect();
-mysql_query("SET NAMES UTF8");
+$db = database_connect();
 
 $id = $_POST['id'];
-$id = mysql_real_escape_string($id);
 $ip = $_SERVER["REMOTE_ADDR"];
 $req = mysql_query("SELECT like1,unlike1 FROM prenoms WHERE id = '$id'"); //requete pour choper le nombre de likes et d'unlikes déjà présents
 $rep = mysql_fetch_row($req);

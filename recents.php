@@ -1,6 +1,6 @@
 <?php
 include("outils/connex.php");
-database_connect();
+$db = database_connect();
 mysql_query("SET NAMES UTF8");
 
 include('outils/convert_date.php');
@@ -34,14 +34,16 @@ include ("header.php");
 		}
 		$debut = ($page-1)*$nb_prenoms_page;
 		// echo $nb_prenoms_page.' prénoms à partir du '.$debut.'ème';		
-		$req = mysql_query("SELECT SQL_CALC_FOUND_ROWS id,prenom,time,like1,unlike1,ranking FROM prenoms ORDER BY time DESC LIMIT $debut,$nb_prenoms_page");
+		$query = $db->prepare("SELECT SQL_CALC_FOUND_ROWS id,prenom,time,like1,unlike1,ranking FROM prenoms ORDER BY time DESC LIMIT $debut,$nb_prenoms_page");
+		$query->execute();
+		$sql_result = $query->fetchAll();
 		echo'<ol id="liste_entrees">';
-		while($rep = mysql_fetch_row($req)) {
-			$id = $rep[0];	
-			$prenom = stripslashes($rep[1]);
-			$time = $rep[2];
-			$like1 = $rep[3];
-			$unlike1 = $rep[4];
+		foreach ($sql_result as $row) {
+			$id = $row[0];	
+			$prenom = stripslashes($row[1]);
+			$time = $row[2];
+			$like1 = $row[3];
+			$unlike1 = $row[4];
 			echo ('<li class="entree">');
 			echo ('<div class="entree1ligne">&#8220;&nbsp;<span class="prenom">'.$prenom.'</span>&nbsp;&#8221;</div>');
 			echo ('<div class="entree2ligne">né(e) le '.convert_date($time,'grand').' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');							
@@ -57,10 +59,11 @@ include ("header.php");
 			echo '<a href="recents-'.($page-1).'.html" class="lien">prénoms cons précédents</a> - ';
 		}
 	
-		$req = mysql_query("SELECT FOUND_ROWS() AS NbRows"); // fait une deuxième requête sql plus simple pour connaitre le nb total de statuts grace Ã  SQL_CALC_FOUND_ROWS
-		$rep = mysql_fetch_row($req);
-		$nb_total_pages = round($rep[0] /10);
-		$nb_start = $page-5; // liste à  partir de la 5e précédente par rapport à l'actuelle				
+		$query = $db->prepare("SELECT FOUND_ROWS() AS NbRows"); // fait une deuxième requête sql plus simple pour connaitre le nb total de statuts grace à SQL_CALC_FOUND_ROWS
+		$query->execute();
+		$sql_result = $query->fetch();
+		$nb_total_pages = round($sql_result[0] /10);
+		$nb_start = $page-5; // liste à partir de la 5e précédente par rapport à l'actuelle				
 		if ($nb_start<1) { 
 			$nb_start=1; //sauf si la page actuelle est <5
 		}

@@ -1,13 +1,11 @@
 <?php
 include("outils/connex.php");
-database_connect();
-mysql_query("SET NAMES UTF8");
+$db = database_connect();
 
 include("outils/convert_date.php");
 
 // AJOUT D'UN NOUVEAU PRENOM
 $prenom = $_POST['prenom'];
-$prenom = mysql_real_escape_string($prenom);
 $query = mysql_query("SELECT id FROM prenoms WHERE prenom = '$prenom'"); // vérifie si le prénom est pas déjà dans la bdd
 if(mysql_num_rows($query) == 1){ // si le prenom est déjà en bdd
 	echo '<div style="color:red;">Ce prénom a déjà été inventé !</div>';
