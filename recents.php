@@ -1,7 +1,6 @@
 <?php
 include("outils/connex.php");
 $db = database_connect();
-mysql_query("SET NAMES UTF8");
 
 include('outils/convert_date.php');
 
