@@ -2,7 +2,7 @@
 include("outils/connex.php");
 $db = database_connect();
 
-include('outils/convert_date.php');
+setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 
 include ("header.php");
 ?>
@@ -16,7 +16,7 @@ include ("header.php");
 		<input type="submit" name="submit" value="Soumettre" id="submit" class="bouton"/>
 	</form>
 	
-	<?php		
+	<?php
 	// AJOUT D'UN NOUVEAU PRENOM
 	if(isset($_POST['prenom']) && $_POST['prenom']!='') {
 		$prenom = $_POST['prenom'];
@@ -34,9 +34,8 @@ include ("header.php");
 			$nb = $query->fetch();
 			if ($nb[0]<=2) { //si il y en 2 ou moins, on poste
 				$ip = $_SERVER["REMOTE_ADDR"];
-				$time = time();	
-				$query = $db->prepare("INSERT INTO prenoms (id,prenom,auteur,time,like1,unlike1,ranking,ip) VALUES('','$prenom','Anonyme','$time','0','0','0','$ip')");
-				$query->execute();
+				$query = $db->prepare("INSERT INTO prenoms (prenom,auteur,ip) VALUES(?,'Anonyme',?)");
+				$query->execute([$prenom,$ip]);
 				header('location:recents.php');
 			}
 			else {   //si la même IP a déjà posté 3 fois de suite
@@ -71,12 +70,12 @@ include ("header.php");
 		foreach ($sql_result as $row) {
 			$id = $row[0];
 			$prenom = stripslashes($row[1]);
-			$time = $row[2];
+			$timestamp = strtotime($row[2]);
 			$like1 = $row[3];
 			$unlike1 = $row[4];					
 			echo ('<li class="entree">');
 			echo ('<div class="entree1ligne">&#8220;&nbsp;<span class="prenom">'.$prenom.'</span>&nbsp;&#8221;</div>');
-			echo ('<div class="entree2ligne">né(e) le '.convert_date($time,'grand').' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');					
+			echo ('<div class="entree2ligne">né(e) le '.strftime ('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');					
 		}
 		echo'</ol>';
 	?>

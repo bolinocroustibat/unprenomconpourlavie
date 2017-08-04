@@ -2,7 +2,7 @@
 include("outils/connex.php");
 $db = database_connect();
 
-include('outils/convert_date.php');
+setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 
 include ("header.php");
 ?>
@@ -40,12 +40,12 @@ include ("header.php");
 		foreach ($sql_result as $row) {
 			$id = $row[0];	
 			$prenom = stripslashes($row[1]);
-			$time = $row[2];
+			$timestamp = strtotime($row[2]);
 			$like1 = $row[3];
 			$unlike1 = $row[4];
 			echo ('<li class="entree">');
 			echo ('<div class="entree1ligne">&#8220;&nbsp;<span class="prenom">'.$prenom.'</span>&nbsp;&#8221;</div>');
-			echo ('<div class="entree2ligne">né(e) le '.convert_date($time,'grand').' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');							
+			echo ('<div class="entree2ligne">né(e) le '.strftime('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');							
 		}
 		echo'</ol>';
 	?>

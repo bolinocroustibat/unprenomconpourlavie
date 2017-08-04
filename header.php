@@ -37,6 +37,7 @@
 
 <body>
 
+<!--
 	<div id="background_animation_div" style="position:fixed;top:0px;left:0px;overflow:hidden;width:100%;height:100%;z-index:-10;">	
 		<object type="application/x-shockwave-flash" data="http://www.unprenomconpourlavie.com/flash/bc_bg.swf" width="100%" height="100%">
 		<param name="movie" value="flash/bc_bg.swf" />
@@ -45,3 +46,4 @@
 		<param name='Flashvars' value='config_file=http://www.unprenomconpourlavie.com/flash/config_bg.xml' />
 		</object>			
 	</div>
+-->
