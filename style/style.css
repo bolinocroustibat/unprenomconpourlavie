@@ -12,18 +12,21 @@ color: #777;
 background: url('prenomscons_background_4.jpg') repeat;
 }
 
+#main-wrapper{
+max-width:680px;
+margin:0 auto 0 auto;
+padding:20px 10px 20px 10px;
+}
+
 #formulaire {
-margin-top: 10px;
-margin-left: auto;
-margin-right: auto;
-width:640px;
+width:100%;
+box-sizing: border-box;
 padding:20px;
+z-index:999;
 background-color : #fbedf3;
 /* background-color: #CBFADF; */
 /* background-color: #fffaf4; */
 border-radius: 15px;
--moz-border-radius: 15px;
--webkit-border-radius: 15px;
 }
 
 .bouton{
@@ -46,13 +49,12 @@ cursor:pointer;
 
 
 #menu{
-font-size:18px;
+width:100%;
+box-sizing: border-box;
 position:relative;
-z-index: 1;
 margin-top: 20px;
-margin-left: auto;
-margin-right: auto;
-width: 680px;
+font-size:18px;
+z-index: 500;
 }
 
 #menu span{
@@ -64,9 +66,7 @@ padding: 0 15px 5px 15px;
 margin-right:20px;
 background-color : #fbedf3;
 /* background-color: #CBFADF; */
--moz-border-radius-topright: 15px;
 border-top-right-radius: 15px;
--moz-border-radius-topleft: 15px;
 border-top-left-radius: 15px;
 }
 
@@ -80,11 +80,20 @@ padding: 0 15px 5px 15px;
 margin-right:20px;
 background-color: #ffbac6;
 /* background-color: #04959D; */
--moz-border-radius-topright: 15px;
 border-top-right-radius: 15px;
--moz-border-radius-topleft: 15px;
 border-top-left-radius: 15px;
 color:#444;
+}
+
+
+@media screen and (max-width:600px) {
+	#menu{
+	font-size:0.7em;
+	}
+	#menu span, #menu a{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	}
 }
 
 #menu a:hover{
@@ -93,20 +102,15 @@ background-color: #FFF;
 }
 
 #contenu {
+width:100%;
+box-sizing: border-box;
 position:relative;
-z-index: 10;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 20px;
-width: 640px;
+z-index: 999;
 padding:20px;
 background-color : #fbedf3;
 /* background-color: #CBFADF; */
--moz-border-radius-topright: 15px;
 border-top-right-radius: 15px;
--moz-border-radius-bottomleft: 15px;
 border-bottom-left-radius: 15px;
--moz-border-radius-bottomright: 15px;
 border-bottom-right-radius: 15px;
 }
 

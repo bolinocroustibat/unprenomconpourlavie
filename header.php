@@ -3,7 +3,7 @@
 
 <head>
 
-	<link href='http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic&amp;v1' rel='stylesheet' type='text/css' />
+	<link href='//fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic&amp;v1' rel='stylesheet' type='text/css' />
 
 	<title>Un prénom con pour la vie</title>
 	
@@ -17,10 +17,12 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<link rel="icon" type="image/gif" href="style/favicon.gif" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/bg_unprenomconpourlavie.js" defer></script>
+	<script src="js/vendor/velocity.min.js" defer></script>
+	<script src="js/animated_background.js" defer></script>
 	
 	<script type="text/javascript">
-
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-24185986-1']);
 	  _gaq.push(['_trackPageview']);
@@ -30,20 +32,11 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-
 	</script>
 
 </head>
 
 <body>
 
-<!--
-	<div id="background_animation_div" style="position:fixed;top:0px;left:0px;overflow:hidden;width:100%;height:100%;z-index:-10;">	
-		<object type="application/x-shockwave-flash" data="http://www.unprenomconpourlavie.com/flash/bc_bg.swf" width="100%" height="100%">
-		<param name="movie" value="flash/bc_bg.swf" />
-		<param name='wmode' value='transparent' />
-		<param name='bgcolor' value='#000000' />
-		<param name='Flashvars' value='config_file=http://www.unprenomconpourlavie.com/flash/config_bg.xml' />
-		</object>			
-	</div>
--->
+	<div id="animated-background-wrapper"></div>
+	<div id="main-wrapper">
