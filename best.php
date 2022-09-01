@@ -49,7 +49,7 @@ include ("header.php");
 
 <div id="menu">
 	<span><img src="style/ours.png" style="position:relative;top:5px;" alt="" />&nbsp;&nbsp;&nbsp;Top des prénoms cons</span>
-	<a href="http://www.unprenomconpourlavie.com/recents.html"><img src="style/biberon.png" style="position:relative;" alt="" />&nbsp;&nbsp;&nbsp;Derniers prénoms cons</a>
+	<a href="recents.html"><img src="style/biberon.png" style="position:relative;" alt="" />&nbsp;&nbsp;&nbsp;Derniers prénoms cons</a>
 </div>
 
 <div id="contenu">
@@ -72,10 +72,10 @@ include ("header.php");
 			$prenom = stripslashes($row[1]);
 			$timestamp = strtotime($row[2]);
 			$like1 = $row[3];
-			$unlike1 = $row[4];					
+			$unlike1 = $row[4];
 			echo ('<li class="entree">');
 			echo ('<div class="entree1ligne">&#8220;&nbsp;<span class="prenom">'.$prenom.'</span>&nbsp;&#8221;</div>');
-			echo ('<div class="entree2ligne">né(e) le '.strftime ('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');					
+			echo ('<div class="entree2ligne">né(e) le '.strftime ('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');
 		}
 		echo'</ol>';
 	?>

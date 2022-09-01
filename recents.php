@@ -18,7 +18,7 @@ include ("header.php");
 </div>
 
 <div id="menu">
-	<a href="http://www.unprenomconpourlavie.com/best.html"><img src="style/ours.png" border="0" style="position:relative;top:5px;" alt="" />&nbsp;&nbsp;&nbsp;Top des prénoms cons</a>
+	<a href="best.html"><img src="style/ours.png" border="0" style="position:relative;top:5px;" alt="" />&nbsp;&nbsp;&nbsp;Top des prénoms cons</a>
 	<span><img src="style/biberon.png" border="0" alt="" />&nbsp;&nbsp;&nbsp;Derniers prénoms cons</span>
 </div>
 
@@ -45,7 +45,7 @@ include ("header.php");
 			$unlike1 = $row[4];
 			echo ('<li class="entree">');
 			echo ('<div class="entree1ligne">&#8220;&nbsp;<span class="prenom">'.$prenom.'</span>&nbsp;&#8221;</div>');
-			echo ('<div class="entree2ligne">né(e) le '.strftime('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');							
+			echo ('<div class="entree2ligne">né(e) le '.strftime('%e %B %G', $timestamp).' &#183; <span id="'.$id.'" class="lien like">j\'appelerais bien mon gosse comme ça ('.$like1.')</span> &#183; <span id="'.$id.'" class="lien unlike">j\'appelerais pas mon gosse comme ça  ('.$unlike1.')</span></div></li>');
 		}
 		echo'</ol>';
 	?>
