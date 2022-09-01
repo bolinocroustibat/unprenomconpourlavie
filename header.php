@@ -7,7 +7,7 @@
 
 	<title>Un prénom con pour la vie</title>
 	
-	<meta charset="UTF-8" />		
+	<meta charset="UTF-8" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="Description" content="Trop peu de prénoms ? Inventons-en de nouveaux !"/>
 	<meta name="Generator" content="Notepad++"/>
@@ -23,15 +23,15 @@
 	<script src="js/animated_background.js" defer></script>
 	
 	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-24185986-1']);
-	  _gaq.push(['_trackPageview']);
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-24185986-1']);
+		_gaq.push(['_trackPageview']);
 
-	  (function() {
+		(function() {
 		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+		})();
 	</script>
 
 </head>

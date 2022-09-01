@@ -1,5 +1,5 @@
 <?php
-include("outils/connex.php");
+include("utils/connect.php");
 $db = database_connect();
 
 setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
