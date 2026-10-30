@@ -62,13 +62,13 @@ include ("header.php");
 		$query->execute();
 		$sql_result = $query->fetch();
 		$nb_total_pages = round($sql_result[0] /10);
-		$nb_start = $page-5; // liste à partir de la 5e précédente par rapport à l'actuelle				
+		$nb_start = $page-5; // liste à partir de la 5e précédente par rapport à l'actuelle
 		if ($nb_start<1) { 
 			$nb_start=1; //sauf si la page actuelle est <5
 		}
 		$nb = $nb_start;
 		
-		while($nb < $page) {					
+		while($nb < $page) {
 			echo ('<a href="recents-'.$nb.'.html" class="lien">'.$nb.'</a> - '); // toutes les pages précédentes
 			$nb++;
 		}
